@@ -40,6 +40,12 @@ https://www.w3schools.com/w3css/default.asp
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 //alert("This file last modified " + docMod); // generates alert box with last modified time stamp. un-comment out this entire line if you want to use.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+//Creating a variable called UTimage that will be an image file internal to the javascript
+var UTimage = new Image();
+//linking UTimage to the source file that is loaded in the repository
+UTimage.src = 'utaluxart-12_3.jpg';
+	
 </script>
 
 
@@ -63,7 +69,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
-		ctx.drawImage(https://cns.utexas.edu/sites/default/files/uploads/images/default/utaluxart-12_3.jpg, 10, 10);
+		ctx.drawImage(UTimage, 10, 10);
     </script>
 		
 	</p>
