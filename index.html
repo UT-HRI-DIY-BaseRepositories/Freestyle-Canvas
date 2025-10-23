@@ -40,14 +40,6 @@ https://www.w3schools.com/w3css/default.asp
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 //alert("This file last modified " + docMod); // generates alert box with last modified time stamp. un-comment out this entire line if you want to use.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-
-/* This scripts below initiate a canvas and puts text on the canvas "myCanvas" that is located down in the html code*/
-var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext("2d");
-context.font = '20pt Calibri';
-context.fillStyle = "black";
-context.fillText("Original image will go here", 10, 20);
-
 </script>
 
 
@@ -62,8 +54,17 @@ context.fillText("Original image will go here", 10, 20);
 	
 <div id="content" class="w3-container">
 	<p>
+		
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-
+      <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext("2d");
+        context.font = '20pt Calibri';
+        context.fillStyle = "black";
+        context.fillText("Original image will go here", 10, 20);
+      </script>
+		
 	</p>
 </div>
 	
