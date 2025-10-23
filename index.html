@@ -69,7 +69,9 @@ UTimage.src = 'utaluxart-12_3.jpg';
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
-		context.drawImage(UTimage, 10, 10);
+		context.drawImage(UTimage, 0, 0, img.width,    img.height,     // source rectangle
+                   0, 0, canvas.width, canvas.height); // destination rectangle
+		
     </script>
 		
 	</p>
