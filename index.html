@@ -81,7 +81,7 @@ context.clearRect(0, 0, canvas.width, canvas.height);
   const lineWidthT = 6;
 
   // --- draw the Letter U ---
-  context.strokeStyle = "#ffb86b"; // orange-gold
+  context.strokeStyle = "#BF5700"; // burnt orange
   context.lineWidth = lineWidthU;
   context.beginPath();
   context.moveTo(cx - scale / 2, cy - scale / 1.4); // left vertical
@@ -95,11 +95,11 @@ context.clearRect(0, 0, canvas.width, canvas.height);
   context.lineWidth = lineWidthT;
   context.beginPath();
   // top bar of T
-  context.moveTo(cx - scale / 3, cy - scale / 1.6);
-  context.lineTo(cx + scale / 3, cy - scale / 1.6);
+  context.moveTo(cx - scale / 3, cy - scale / 2);
+  context.lineTo(cx + scale / 3, cy - scale / 2);
   // vertical stem of T
-  context.moveTo(cx, cy - scale / 1.6);
-  context.lineTo(cx, cy + scale / 2);
+  context.moveTo(cx, cy - scale / 2);
+  context.lineTo(cx, cy + scale / 2.4);
   context.stroke();
     </script>
 		
