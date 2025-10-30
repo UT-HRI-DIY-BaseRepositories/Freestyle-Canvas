@@ -58,20 +58,53 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<br>	
     <canvas id="myCanvas" width=360 height=450 style="border:1px solid #d3d3d3;"></canvas>
       
-	<script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+	<script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
      	//Creating a variable called UTimage that will be an image file internal to the javascript
-		var UTimage = new Image();
+	//	var UTimage = new Image();
 		//linking UTimage to the source file that is loaded in the repository
-		UTimage.src = 'utaluxart-12_3.jpg';
+	//	UTimage.src = 'utaluxart-12_3.jpg';
 		
 		
 		var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
-		context.drawImage(UTimage, 0, 0, UTimage.width, UTimage.height,     // source rectangle
-                   0, 0, canvas.width, canvas.height); // destination rectangle
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+  // --- parameters ---
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+  const scale = 120;
+  const lineWidthU = 10;
+  const lineWidthT = 6;
+
+  // --- draw the Letter U ---
+  ctx.strokeStyle = "#ffb86b"; // orange-gold
+  ctx.lineWidth = lineWidthU;
+  ctx.beginPath();
+  ctx.moveTo(cx - scale / 2, cy - scale / 1.4); // left vertical
+  ctx.lineTo(cx - scale / 2, cy + scale / 2);   // down
+  ctx.lineTo(cx + scale / 2, cy + scale / 2);   // bottom flat
+  ctx.lineTo(cx + scale / 2, cy - scale / 1.4); // up
+  ctx.stroke();
+
+  // --- draw the T nested inside ---
+  ctx.strokeStyle = "#7dd3fc"; // light blue
+  ctx.lineWidth = lineWidthT;
+  ctx.beginPath();
+  // top bar of T
+  ctx.moveTo(cx - scale / 3, cy - scale / 1.6);
+  ctx.lineTo(cx + scale / 3, cy - scale / 1.6);
+  // vertical stem of T
+  ctx.moveTo(cx, cy - scale / 1.6);
+  ctx.lineTo(cx, cy + scale / 2);
+  ctx.stroke();
+		
+   //     context.fillText("Original image will go here", 10, 20);
+	//	context.drawImage(UTimage, 0, 0, UTimage.width, UTimage.height,     // source rectangle
+    //               0, 0, canvas.width, canvas.height); // destination rectangle
 		
     </script>
 		
