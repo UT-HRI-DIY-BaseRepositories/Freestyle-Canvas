@@ -91,12 +91,11 @@ context.clearRect(0, 0, canvas.width, canvas.height);
   context.stroke();
 
   // --- draw the T nested inside ---
- // context.strokeStyle = "#7dd3fc"; // light blue
   context.lineWidth = lineWidthT;
   context.beginPath();
   // top bar of T
-  context.moveTo(cx - scale / 3, cy - scale / 1);
-  context.lineTo(cx + scale / 3, cy - scale / 1);
+  context.moveTo(cx - scale / 3, cy - scale / 3);
+  context.lineTo(cx + scale / 3, cy - scale / 3);
   // vertical stem of T
   context.moveTo(cx, cy - scale / 1);
   context.lineTo(cx, cy + scale / 2);
