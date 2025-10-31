@@ -77,12 +77,11 @@ context.clearRect(0, 0, canvas.width, canvas.height);
   const cx = canvas.width / 2;
   const cy = canvas.height / 2;
   const scale = 120;
-  const lineWidthU = 10;
   const lineWidthT = 6;
 
   // --- draw the Letter U ---
   context.strokeStyle = "#BF5700"; // burnt orange
-  context.lineWidth = lineWidthU;
+  context.lineWidth = 10;
   context.beginPath();
   context.moveTo(cx - scale / 2, cy - scale / 1.4); // left vertical
   context.lineTo(cx - scale / 2, cy + scale / 2);   // down
@@ -91,13 +90,12 @@ context.clearRect(0, 0, canvas.width, canvas.height);
   context.stroke();
 
   // --- draw the T nested inside ---
-  context.lineWidth = lineWidthT;
   context.beginPath();
   // top bar of T
   context.moveTo(cx - scale / 3, cy - scale / 3);
   context.lineTo(cx + scale / 3, cy - scale / 3);
   // vertical stem of T
-  context.moveTo(cx, cy - scale / 1);
+  context.moveTo(cx, cy - scale / 3);
   context.lineTo(cx, cy + scale / 2);
   context.stroke();
     </script>
