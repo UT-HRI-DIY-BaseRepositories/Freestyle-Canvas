@@ -1,2 +1,2 @@
 # Freestyle-Canvas
-This is for student exploration. See student guide 3.5a.
+This is the base repository for Student Guide #3.5a
